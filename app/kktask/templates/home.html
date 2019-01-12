@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for user in myUser %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Reg. No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{ user.registration_number }}  </td>
+      <td>{{ user.username }}  </td>
+      <td>{{ user.email }}  </td>
+      <td>{{ user.address }}  </td>
+    </tr>
+
+  </tbody>
+</table>
+{% endfor %}
+{% endblock content %}
